@@ -67,24 +67,24 @@ const MyNav = () => {
         </div>
       </nav>
 
-      <header class="header">
+      <header className="header">
         <div
-          class="banner"
+          className="banner"
           style={{ backgroundImage: `url("squid-game.jpg")` }}
         >
-          <div class="banner-info">
-            <h1 class="banner-title">SQUID GAMES</h1>
-            <div class="banner-icons">
-              <button class="banner-btn">Play</button>
-              <button class="banner-btn">My List</button>
+          <div className="banner-info">
+            <h1 className="banner-title">SQUID GAMES</h1>
+            <div className="banner-icons">
+              <button className="banner-btn">Play</button>
+              <button className="banner-btn">My List</button>
             </div>
-            <div class="banner-description">
+            <div className="banner-description">
               Hundreds of cash-strapped players accept a strange invitation to
               compete in children's games. Inside, a tempting prize awaits —
               with deadly high stakes.
             </div>
           </div>
-          <div class="banner-fade"></div>
+          <div className="banner-fade"></div>
         </div>
       </header>
     </>
