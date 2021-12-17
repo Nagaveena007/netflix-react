@@ -1,5 +1,5 @@
 import { Component } from "react";
-import { Modal, Button } from "react-bootstrap";
+import CommentList from "../CommentArea/CommentList";
 
 class CommentArea extends Component {
   state = {
@@ -10,7 +10,7 @@ class CommentArea extends Component {
     try {
       const response = await fetch(
         "https://striveschool-api.herokuapp.com/api/comments/" +
-          this.props.asin,
+          this.props.imdbId,
         {
           headers: {
             Authorization:
@@ -26,26 +26,9 @@ class CommentArea extends Component {
       alert("Fetching mistake!");
     }
   };
-
   render() {
-    return (
-      <>
-        <Modal.Dialog>
-          <Modal.Header closeButton>
-            <Modal.Title>{this.props.movie.comments.asin}</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>
-            <p>Modal body text goes here.</p>
-          </Modal.Body>
-
-          <Modal.Footer>
-            <Button variant="secondary">Close</Button>
-            <Button variant="primary">Save changes</Button>
-          </Modal.Footer>
-        </Modal.Dialog>
-        ;
-      </>
-    );
+    console.log(this.props);
+    return <CommentList commentsToShow={this.state.comments} />;
   }
 }
 
